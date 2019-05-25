@@ -1,0 +1,9 @@
+/sms-plugin/*.classpath
+/sms-plugin/*.project
+/sms-plugin/.settings
+/sms-springboot-example/*.classpath
+/sms-springboot-example/*.project
+/sms-springboot-example/.settings
+/spring-boot-starter-sms/*.classpath
+/spring-boot-starter-sms/*.project
+/spring-boot-starter-sms/.settings
