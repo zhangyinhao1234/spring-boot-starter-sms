@@ -13,3 +13,22 @@ server:
 #      defaultZone: http://127.0.0.1:8001/eureka/
 
 management.security.enabled: false
+
+
+binpo:
+  plugin:
+    sms: 
+      smsspingBeanIds: aa,bb,cc # 需要添加的自己开发短信发送实现类的 spring bean id
+      # 腾讯云配置文件
+      qcloud: true # 使用腾讯云的短信服务 true/false 不配置表示不使用
+      qcloudAppId: 1000000
+      qcloudAppKey: APPkey
+      qcloudSignName: 【XX科技】 # 短信签名
+      
+      # 大汉三通短信
+      dhst: true 
+      dhstAccount: xxxx #内容短信账号
+      dhstPwd: pwd # 内容短信密码
+      dhstVoiceAccount: xxxx # 语音账号
+      dhstVoicePwd: pwd # 语音密码
+      
