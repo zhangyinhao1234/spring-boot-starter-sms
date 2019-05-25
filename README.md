@@ -175,3 +175,19 @@ POM.xml添加引用
 ### 在SpringBoot 中使用的例子
 
 请参考项目 [sms-springboot-example](https://github.com/zhangyinhao1234/spring-boot-starter-sms/tree/master/sms-springboot-example)
+
+    @Autowired
+    private SMSControlCenter smsControlCenter;
+    
+    @RequestMapping("/sms/send/{tel}")
+    public Map send(HttpServletRequest request, HttpServletResponse response,@PathVariable String tel, String content)
+            throws IOException {
+        content = "您的手机验证码是：123456,打死都不能告诉别人哦！(15分钟有效)";
+        SMSSendParams params = new SMSSendParams(tel, content);
+        params.setType(ISMSToolService.Type.content);
+        smsControlCenter.sendSMS(params);
+        Map map = new HashMap();
+        map.put("success", "1");
+        return map;
+    }
+就是这么简单
