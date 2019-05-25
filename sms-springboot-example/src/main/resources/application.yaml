@@ -18,7 +18,7 @@ management.security.enabled: false
 binpo:
   plugin:
     sms: 
-      smsspingBeanIds: aa,bb,cc # 需要添加的自己开发短信发送实现类的 spring bean id
+      smsspingBeanIds: nEWSMSSendImpl # 需要添加的自己开发短信发送实现类的 spring bean id
       # 腾讯云配置文件
       qcloud: true # 使用腾讯云的短信服务 true/false 不配置表示不使用
       qcloudAppId: 1000000
