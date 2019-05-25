@@ -38,16 +38,17 @@ SMSSpringBeanUtil：必须实现此接口。通过ID获取指定的短信供应�
 		params.setType(ISMSToolService.Type.content);
 		smsControlCenter.sendSMS(params);
 	}
-	
-	
+
+
 	添加新接入的短信平台
-	
+
 	/**
 	 * 
 	 * 新增加的短信平台
 	 *
 	 * @author zhang 2019年5月25日 下午9:35:36
 	 */
+	@Component("nEWSMSSendImpl")
 	public class NEWSMSSendImpl extends AbstractSMSServer{
 	
 	    @Override
@@ -75,9 +76,9 @@ SMSSpringBeanUtil：必须实现此接口。通过ID获取指定的短信供应�
 	    }
 	
 	}
-	
-	
-	
+
+
+​	
 
 
 
