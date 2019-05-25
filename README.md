@@ -158,5 +158,19 @@ POM.xml添加引用
               dhstVoiceAccount: xxxx # 语音账号
               dhstVoicePwd: pwd # 语音密码
 
+直接使用：
 
+	@Autowired
+	private SMSControlCenter smsControlCenter;
+	@Test
+	public void testSSMSConfigImplendSMS() throws IOException{
+		String content="您的手机验证码是：123456,打死都不能告诉别人哦！(15分钟有效)";
+		SMSSendParams params=new SMSSendParams(this.telephone, content);
+		params.setType(ISMSToolService.Type.content);
+		smsControlCenter.sendSMS(params);
+	}
+## 
 
+### 在SpringBoot 中使用的例子
+
+请参考项目 [sms-springboot-example](https://github.com/zhangyinhao1234/spring-boot-starter-sms/tree/master/sms-springboot-example)
