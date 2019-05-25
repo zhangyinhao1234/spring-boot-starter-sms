@@ -13,6 +13,8 @@ public class SMSSendParams {
 
     private String type = ISMSToolService.Type.content;// voice 内容短信还是语音验证码
 
+    private String msgId;
+
     public SMSSendParams(String telephone, String content) {
         this.telephone = telephone;
         this.content = content;
@@ -73,6 +75,14 @@ public class SMSSendParams {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getMsgId() {
+        return msgId;
+    }
+
+    public void setMsgId(String msgId) {
+        this.msgId = msgId;
     }
 
 }
