@@ -28,12 +28,12 @@ import com.binpo.plugin.sms.control.SMSControlCenter;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=SMSBeanConfig.class) 
 public class SMSTest {
-	@Resource(name="smsControlCenter")
-	private SMSControlCenter smsControlCenter;
 	private String telephone="13921219802";
 	private Log logger = LogFactory.getLog(this.getClass());
 	
 	
+	@Autowired
+	private SMSControlCenter smsControlCenter;
 	@Test
 	public void testSSMSConfigImplendSMS() throws IOException{
 		String content="您的手机验证码是：123456,打死都不能告诉别人哦！(15分钟有效)";
