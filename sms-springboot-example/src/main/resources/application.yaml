@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: sms-server
+
+server:
+  port: 8080
+  maxHttpHeaderSize: 10240000
+
+# eureka注册中心
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:8001/eureka/
+
+management.security.enabled: false
